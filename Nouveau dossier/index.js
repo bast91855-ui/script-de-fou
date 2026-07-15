@@ -7,7 +7,6 @@ const config = {
     statut_name: "EZgen", 
     statut_type: "PLAYING" 
 };
-
 const { loadSlashCommands } = require('./events/load-slash.js');
 
 const client = new Client({ 
