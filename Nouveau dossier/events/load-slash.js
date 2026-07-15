@@ -2,7 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord-api-types/v9');
-const config = require("../config.json");
+let config;
+try {
+    config = require('../config.json');
+} catch (e) {
+    config = {
+        token: process.env.token
+    };
+}
 
 async function loadSlashCommands(client) {
     try {
