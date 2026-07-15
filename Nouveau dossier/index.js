@@ -9,7 +9,6 @@ const config = {
 };
 
 const { loadSlashCommands } = require('./events/load-slash.js');
-const { loadSlashCommands } = require('./events/load-slash.js');
 
 const client = new Client({ 
     intents: [
