@@ -3,7 +3,7 @@ const { readdirSync } = require('fs');
 
 // Ici, on définit notre config de secours directement
 const config = {
-    token: process.env.token,
+   token: "MTUyNjE1MDc0NDY4NjcyMzE0NQ.G8gwCd.KZ_wYMtiuh3_WSMAA0T8u9vbJEOMpIYs4oYV8Q",
     statut_name: "EZgen", 
     statut_type: "PLAYING" 
 };
