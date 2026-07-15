@@ -1,6 +1,15 @@
 const { Client, Intents, MessageEmbed, MessageButton, MessageActionRow } = require('discord.js');
 const { readdirSync } = require('fs');
-const config = require('./config.json');
+let config;
+try {
+    config = require('./config.json');
+} catch (e) {
+    config = {
+        token: process.env.token,
+        statut_name: "EZgen", 
+        statut_type: "PLAYING" 
+    };
+}
 const { loadSlashCommands } = require('./events/load-slash.js');
 
 const client = new Client({ 
