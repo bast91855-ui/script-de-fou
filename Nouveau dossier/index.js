@@ -3,8 +3,8 @@ const { readdirSync } = require('fs');
 
 // Ici, on définit notre config de secours directement
 const config = {
-    token: process.env.token,
-    statut_name: "EZgen", 
+    token: process.env.TOKEN,
+    statut_name: "EZgen",
     statut_type: "PLAYING" 
 };
 const { loadSlashCommands } = require('./events/load-slash.js');
