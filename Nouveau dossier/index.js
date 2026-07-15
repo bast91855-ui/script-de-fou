@@ -1,15 +1,14 @@
 const { Client, Intents, MessageEmbed, MessageButton, MessageActionRow } = require('discord.js');
 const { readdirSync } = require('fs');
-let config;
-try {
-    config = require('./config.json');
-} catch (e) {
-    config = {
-        token: process.env.token,
-        statut_name: "EZgen", 
-        statut_type: "PLAYING" 
-    };
-}
+
+// Ici, on définit notre config de secours directement
+const config = {
+    token: process.env.token,
+    statut_name: "EZgen", 
+    statut_type: "PLAYING" 
+};
+
+const { loadSlashCommands } = require('./events/load-slash.js');
 const { loadSlashCommands } = require('./events/load-slash.js');
 
 const client = new Client({ 
